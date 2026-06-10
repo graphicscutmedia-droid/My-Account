@@ -511,9 +511,9 @@
             statusDiv.innerText = "Syncing...";
 
             fetch(GOOGLE_SHEET_URL, { 
-                method: 'POST', 
+                method: 'POST', mode:'no-cors', 
                 mode: 'no-cors', 
-                headers: { 'Content-Type': 'application/json' }, 
+                headers: { 'Content-Type': 'text/plain' }, 
                 body: JSON.stringify({ action: "sync", data: transactions }) 
             })
             .then(() => {
